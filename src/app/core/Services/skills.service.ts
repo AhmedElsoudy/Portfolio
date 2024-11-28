@@ -10,11 +10,10 @@ export class SkillsService {
     return {
       professional__Skills: [
         { Image: 'assets/tools logo/0-angular.svg', Name: 'Angular' },
-        { Image: 'assets/tools logo/react.png', Name: 'React' },
         { Image: 'assets/tools logo/NET_Core_Logo.svg.png', Name: '.Net' },
         { Image: 'assets/tools logo/csharp.png', Name: 'C#' },
         { Image: 'assets/tools logo/sql.png', Name: 'SQL' },
-        { Image: 'assets/tools logo/tailwind.png', Name: 'Tailwind' },
+        // { Image: 'assets/tools logo/tailwind.png', Name: 'Tailwind' },
         { Image: 'assets/tools logo/1-html5.svg', Name: 'HTML5' },
         { Image: 'assets/tools logo/2-css3.svg', Name: 'CSS3' },
         { Image: 'assets/tools logo/3-bootstrap.svg', Name: 'Bootstrap' },
@@ -22,7 +21,6 @@ export class SkillsService {
         { Image: 'assets/tools logo/5-jquery.svg', Name: 'jQuery' },
         { Image: 'assets/tools logo/6-javascript.svg', Name: 'Javascript' },
         { Image: 'assets/tools logo/7-typescript.svg', Name: 'TypeScript' },
-        { Image: 'assets/tools logo/8-firebase.svg', Name: 'Firebase' },
       ],
       Tools: [
         { Image: 'assets/tools logo/vscode.svg', Name: 'VS Code' },

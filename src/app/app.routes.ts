@@ -7,7 +7,7 @@ export const routes: Routes = [
       import(
         './core/components/pages/welcome-page/welcome-page.component'
       ).then((c) => c.WelcomePageComponent),
-    title: 'Muhamed Hajajii - Portfolio',
+    title: 'Ahmed Gomaa - Portfolio',
   },
   {
     path: '',
@@ -22,7 +22,7 @@ export const routes: Routes = [
           import('./core/components/pages/blank/home/home.component').then(
             (c) => c.HomeComponent
           ),
-        title: 'Muhamed Hajajii - Portfolio',
+        title: 'Ahmed Gomaa',
       },
       {
         path: 'about',
@@ -30,7 +30,7 @@ export const routes: Routes = [
           import('./core/components/pages/blank/about/about.component').then(
             (c) => c.AboutComponent
           ),
-        title: 'Muhamed Hajajii - About',
+        title: 'About',
       },
       {
         path: 'experience',
@@ -38,7 +38,7 @@ export const routes: Routes = [
           import(
             './core/components/pages/blank/experience/experience.component'
           ).then((c) => c.ExperienceComponent),
-        title: 'Muhamed Hajajii - Experience',
+        title: 'Experience',
       },
       {
         path: 'projects',
@@ -46,7 +46,7 @@ export const routes: Routes = [
           import(
             './core/components/pages/blank/projects/projects.component'
           ).then((c) => c.ProjectsComponent),
-        title: 'Muhamed Hajajii - Projects',
+        title: 'Projects',
       },
       {
         path: 'skills',
@@ -54,7 +54,7 @@ export const routes: Routes = [
           import('./core/components/pages/blank/skills/skills.component').then(
             (c) => c.SkillsComponent
           ),
-        title: 'Muhamed Hajajii - Skills',
+        title: 'Skills',
       },
       {
         path: 'education',
@@ -62,7 +62,7 @@ export const routes: Routes = [
           import(
             './core/components/pages/blank/education/education.component'
           ).then((c) => c.EducationComponent),
-        title: 'Muhamed Hajajii - Education',
+        title: 'Education',
       },
       {
         path: 'contact',
@@ -70,15 +70,7 @@ export const routes: Routes = [
           import(
             './core/components/pages/blank/contact/contact.component'
           ).then((c) => c.ContactComponent),
-        title: 'Muhamed Hajajii - Contact',
-      },
-      {
-        path: 'blog',
-        loadComponent: () =>
-          import('./core/components/pages/blank/blog/blog.component').then(
-            (c) => c.BlogComponent
-          ),
-        title: 'Muhamed Hajajii - Blog',
+        title: 'Contact',
       },
       {
         path: 'resume',
@@ -86,7 +78,7 @@ export const routes: Routes = [
           import('./core/components/pages/blank/resume/resume.component').then(
             (c) => c.ResumeComponent
           ),
-        title: 'Muhamed Hajajii - Resume',
+        title: 'Resume',
       },
     ],
   },
@@ -97,6 +89,6 @@ export const routes: Routes = [
       import('./core/components/shared/notfound/notfound.component').then(
         (c) => c.NotfoundComponent
       ),
-    title: 'Muhamed Hajajii - notfound',
+    title: 'Ahmed Gomaa - notfound',
   },
 ];
