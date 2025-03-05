@@ -1,0 +1,427 @@
+<section (click)="onAllProjectBannerClick(projLightBox)">
+  <div>
+    <h2 class="p-2 py-4 text-bg-success fw-light text-uppercase">Projects</h2>
+  </div>
+  <div class="p-3">
+    <div class="row my-3 justify-content-center">
+
+      <div class="text-success p-2 col-12">
+        <h4 class="m-0">Angular 16</h4>
+      </div>
+      <!-- Angular 16 -->
+      @for (item of _ProjectsService.getAllProjects().Angular16__Projects; track
+      $index) {
+      <div class="col-12 col-md-6 col-xl-4 p-3 project">
+        <div
+          class="bg-white shadow h-100 rounded-3 position-relative overflow-hidden"
+        >
+          <div
+            (click)="onProjectBannerClick(tsheel, $event)"
+            role="button"
+            class="ProjImage"
+          >
+            <img
+              class="w-100 h-100 rounded-top-1"
+              [src]="item.Project__image"
+              [alt]="item.Project__Name"
+            />
+          </div>
+          <hr class="w-75 mx-auto" />
+          <div class="d-flex justify-content-between align-items-center px-3">
+            <p class="m-0 fs-4 text-success">
+              {{ item.Project__Name }}
+            </p>
+            <button class="btn" (click)="onProjectBannerClick(tsheel, $event)">
+              <i class="fa-solid fa-ellipsis-vertical text-success fa-2x"></i>
+            </button>
+          </div>
+          <p class="px-3">{{ item.Project__Description }}</p>
+          <div #projLightBox>
+            <div
+              #tsheel
+              class="projLightBox p-3 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <p
+                  (click)="onProjectBannerClick(tsheel, $event)"
+                  class="text-success fs-2 position-relative AccomplishmentsTitle m-0"
+                >
+                  Accomplishments
+                  <button
+                    class="btn btn-close position-absolute end-0"
+                  ></button>
+                </p>
+                <ul class="fs-6 fw-bold">
+                  @for (item of item.Project__Technologies; track $index) {
+                  <li>{{ item }}</li>
+                  }
+                </ul>
+              </div>
+              <div>
+                <hr />
+                <ul
+                  class="list-unstyled projIcons d-flex justify-content-center gap-2"
+                >
+                  <li class="bg-success rounded-circle demo">
+                    <a
+                      class="text-white"
+                      [href]="item.Project__Demo"
+                      target="blank"
+                      ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                    ></a>
+                  </li>
+                  @if (item.Project__Repo.length > 0) {
+                  <li class="bg-success rounded-circle repo">
+                    <a
+                      class="text-white"
+                      [href]="item.Project__Repo"
+                      target="blank"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+      <!-- Html Css Js jQuery -->
+      <div class="text-success p-2 col-12">
+        <h4 class="m-0">jQuery</h4>
+      </div>
+      @for (item of _ProjectsService.getAllProjects().Jquery__Projects; track
+      $index) {
+      <div class="col-12 col-md-6 col-xl-4 p-3 project">
+        <div
+          class="bg-white shadow h-100 rounded-3 position-relative overflow-hidden"
+        >
+          <div
+            (click)="onProjectBannerClick(tsheel, $event)"
+            role="button"
+            class="ProjImage"
+          >
+            <img
+              class="w-100 h-100 rounded-top-1"
+              [src]="item.Project__image"
+              [alt]="item.Project__Name"
+            />
+          </div>
+          <hr class="w-75 mx-auto" />
+          <div class="d-flex justify-content-between align-items-center px-3">
+            <p class="m-0 fs-4 text-success">
+              {{ item.Project__Name }}
+            </p>
+            <button class="btn" (click)="onProjectBannerClick(tsheel, $event)">
+              <i class="fa-solid fa-ellipsis-vertical text-success fa-2x"></i>
+            </button>
+          </div>
+          <p class="px-3">{{ item.Project__Description }}</p>
+          <div #projLightBox>
+            <div
+              #tsheel
+              class="projLightBox p-3 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <p
+                  (click)="onProjectBannerClick(tsheel, $event)"
+                  class="text-success fs-2 position-relative AccomplishmentsTitle m-0"
+                >
+                  Accomplishments
+                  <button
+                    class="btn btn-close position-absolute end-0"
+                  ></button>
+                </p>
+                <ul class="fs-6 fw-bold">
+                  @for (item of item.Project__Technologies; track $index) {
+                  <li>{{ item }}</li>
+                  }
+                </ul>
+              </div>
+              <div>
+                <hr />
+                <ul
+                  class="list-unstyled projIcons d-flex justify-content-center gap-2"
+                >
+                  <li class="bg-success rounded-circle demo">
+                    <a
+                      class="text-white"
+                      [href]="item.Project__Demo"
+                      target="blank"
+                      ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                    ></a>
+                  </li>
+                  @if (item.Project__Repo.length > 0) {
+                  <li class="bg-success rounded-circle repo">
+                    <a
+                      class="text-white"
+                      [href]="item.Project__Repo"
+                      target="blank"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+      <!-- Html Css Js -->
+      <div class="text-success p-2 col-12">
+        <h4 class="m-0">JavaScript</h4>
+      </div>
+      @for (item of _ProjectsService.getAllProjects().PureJs__Projects; track
+      $index) {
+      <div class="col-12 col-md-6 col-xl-4 p-3 project">
+        <div
+          class="bg-white shadow h-100 rounded-3 position-relative overflow-hidden"
+        >
+          <div
+            (click)="onProjectBannerClick(tsheel, $event)"
+            role="button"
+            class="ProjImage"
+          >
+            <img
+              class="w-100 h-100 rounded-top-1"
+              [src]="item.Project__image"
+              [alt]="item.Project__Name"
+            />
+          </div>
+          <hr class="w-75 mx-auto" />
+          <div class="d-flex justify-content-between align-items-center px-3">
+            <p class="m-0 fs-4 text-success">
+              {{ item.Project__Name }}
+            </p>
+            <button class="btn" (click)="onProjectBannerClick(tsheel, $event)">
+              <i class="fa-solid fa-ellipsis-vertical text-success fa-2x"></i>
+            </button>
+          </div>
+          <p class="px-3">{{ item.Project__Description }}</p>
+          <div #projLightBox>
+            <div
+              #tsheel
+              class="projLightBox p-3 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <p
+                  (click)="onProjectBannerClick(tsheel, $event)"
+                  class="text-success fs-2 position-relative AccomplishmentsTitle m-0"
+                >
+                  Accomplishments
+                  <button
+                    class="btn btn-close position-absolute end-0"
+                  ></button>
+                </p>
+                <ul class="fs-6 fw-bold">
+                  @for (item of item.Project__Technologies; track $index) {
+                  <li>{{ item }}</li>
+                  }
+                </ul>
+              </div>
+              <div>
+                <hr />
+                <ul
+                  class="list-unstyled projIcons d-flex justify-content-center gap-2"
+                >
+                  <li class="bg-success rounded-circle demo">
+                    <a
+                      class="text-white"
+                      [href]="item.Project__Demo"
+                      target="blank"
+                      ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                    ></a>
+                  </li>
+                  @if (item.Project__Repo.length > 0) {
+                  <li class="bg-success rounded-circle repo">
+                    <a
+                      class="text-white"
+                      [href]="item.Project__Repo"
+                      target="blank"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+
+      <!-- Html Css Js -->
+      <div class="text-success p-2 col-12">
+        <h4 class="m-0">ASP.Net MVC</h4>
+      </div>
+      @for (item of _ProjectsService.getAllProjects().MVC__Projects; track
+      $index) {
+      <div class="col-12 col-md-6 col-xl-4 p-3 project">
+        <div
+          class="bg-white shadow h-100 rounded-3 position-relative overflow-hidden"
+        >
+          <div
+            (click)="onProjectBannerClick(tsheel, $event)"
+            role="button"
+            class="ProjImage"
+          >
+            <img
+              class="w-100 h-100 rounded-top-1"
+              [src]="item.Project__image"
+              [alt]="item.Project__Name"
+            />
+          </div>
+          <hr class="w-75 mx-auto" />
+          <div class="d-flex justify-content-between align-items-center px-3">
+            <p class="m-0 fs-4 text-success">
+              {{ item.Project__Name }}
+            </p>
+            <button class="btn" (click)="onProjectBannerClick(tsheel, $event)">
+              <i class="fa-solid fa-ellipsis-vertical text-success fa-2x"></i>
+            </button>
+          </div>
+          <p class="px-3">{{ item.Project__Description }}</p>
+          <div #projLightBox>
+            <div
+              #tsheel
+              class="projLightBox p-3 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <p
+                  (click)="onProjectBannerClick(tsheel, $event)"
+                  class="text-success fs-2 position-relative AccomplishmentsTitle m-0"
+                >
+                  Accomplishments
+                  <button
+                    class="btn btn-close position-absolute end-0"
+                  ></button>
+                </p>
+                <ul class="fs-6 fw-bold">
+                  @for (item of item.Project__Technologies; track $index) {
+                  <li>{{ item }}</li>
+                  }
+                </ul>
+              </div>
+              <div>
+                <hr />
+                <ul
+                  class="list-unstyled projIcons d-flex justify-content-center gap-2"
+                >
+                  <li class="bg-success rounded-circle demo">
+                    <a
+                      class="text-white"
+                      [href]="item.Project__Demo"
+                      target="blank"
+                      ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                    ></a>
+                  </li>
+                  @if (item.Project__Repo.length > 0) {
+                  <li class="bg-success rounded-circle repo">
+                    <a
+                      class="text-white"
+                      [href]="item.Project__Repo"
+                      target="blank"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+
+      <!-- Api Project -->
+      <div class="text-success p-2 col-12">
+        <h4 class="m-0">ASP.Net Api</h4>
+      </div>
+      @for (item of _ProjectsService.getAllProjects().API__Projects; track
+      $index) {
+      <div class="col-12 col-md-6 col-xl-4 p-3 project">
+        <div
+          class="bg-white shadow h-100 rounded-3 position-relative overflow-hidden"
+        >
+          <div
+            (click)="onProjectBannerClick(tsheel, $event)"
+            role="button"
+            class="ProjImage"
+          >
+            <img
+              class="w-100 h-100 rounded-top-1"
+              [src]="item.Project__image"
+              [alt]="item.Project__Name"
+            />
+          </div>
+          <hr class="w-75 mx-auto" />
+          <div class="d-flex justify-content-between align-items-center px-3">
+            <p class="m-0 fs-4 text-success">
+              {{ item.Project__Name }}
+            </p>
+            <button class="btn" (click)="onProjectBannerClick(tsheel, $event)">
+              <i class="fa-solid fa-ellipsis-vertical text-success fa-2x"></i>
+            </button>
+          </div>
+          <p class="px-3">{{ item.Project__Description }}</p>
+          <div #projLightBox>
+            <div
+              #tsheel
+              class="projLightBox p-3 d-flex flex-column justify-content-between"
+            >
+              <div>
+                <p
+                  (click)="onProjectBannerClick(tsheel, $event)"
+                  class="text-success fs-2 position-relative AccomplishmentsTitle m-0"
+                >
+                  Accomplishments
+                  <button
+                    class="btn btn-close position-absolute end-0"
+                  ></button>
+                </p>
+                <ul class="fs-6 fw-bold">
+                  @for (item of item.Project__Technologies; track $index) {
+                  <li>{{ item }}</li>
+                  }
+                </ul>
+              </div>
+              <div>
+                <hr />
+                <ul
+                  class="list-unstyled projIcons d-flex justify-content-center gap-2"
+                >
+                  <li class="bg-success rounded-circle demo">
+                    <a
+                      class="text-white"
+                      [href]="item.Project__Demo"
+                      target="blank"
+                      ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                    ></a>
+                  </li>
+                  @if (item.Project__Repo.length > 0) {
+                  <li class="bg-success rounded-circle repo">
+                    <a
+                      class="text-white"
+                      [href]="item.Project__Repo"
+                      target="blank"
+                    >
+                      <i class="fa-brands fa-github"></i>
+                    </a>
+                  </li>
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      }
+    </div>
+  </div>
+</section>
